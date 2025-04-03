@@ -1,0 +1,43 @@
+name: milestone_map
+description: "MilestoneMap - A Financial Planning Tool for Life's Key Events."
+
+publish_to: 'none' # This ensures the project is not published to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.0              # State management for managing app state across widgets
+  flutter_dotenv: ^5.0.2        # Environment variables management
+  http: ^0.13.6                 # HTTP requests for API calls (can be expanded for AI service integration)
+  intl: ^0.18.0                 # Internationalization and currency formatting
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0         # Enforces Flutter best practices
+
+flutter:
+  uses-material-design: true
+
+  fonts: 
+   - family: Anton
+     fonts:
+       - asset: lib/assets/fonts/Anton-Regular.ttf
+   - family: KayPhoDu
+     fonts:
+       - asset: lib/assets/fonts/KayPhoDu-Medium.ttf
+
+  # Assets section without va_facilities.json
+  assets:
+   - lib/assets/images/homepagestock.png # Specify the actual image file
+   # - assets/va_facilities.json      # Removed since it does not exist
+
+# Platform configurations
+# iOS disabled to avoid CocoaPods issues; remove to enable if necessary
+platforms:
+  ios: false
